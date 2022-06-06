@@ -1,0 +1,118 @@
+/* ==========================================================================
+   #POMODORO APP STYLES
+   ========================================================================== */
+
+/**
+ *
+ * Inheriting box sizing slightly better best-practice
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ *
+ */
+ html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: var(--pomodoro);
+  transition: background-image 1s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  user-select: none;
+  background-size: 100% 763px;
+  background-repeat: no-repeat;
+  --pomodoro: url(img/chiriro3.gif);
+  --shortBreak: url(img/chiriro4.gif);
+  --longBreak: url(img/kiki.gif);
+}
+
+.timer {
+  position: absolute;
+  top: 200px;
+  left: 280px;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.clock {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  font-size: 8rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  font-family: arial, sans-serif;
+  color: whitesmoke;
+  text-shadow: rgb(106, 176, 189)  0px 6px 0px;
+}
+
+.mode-button {
+  cursor: pointer;
+  border: none;
+  box-shadow: rgb(106, 176, 189) 0px 6px 0px;
+  background-color: whitesmoke;
+  font-size: 16px;
+  height: 28px;
+  cursor: pointer;
+  font-weight: bold;
+  color:  rgb(78, 206, 228);
+  margin: 0px;
+  border-radius: 4px;
+  padding: 2px 12px;
+  transition: color 0.5s ease-in-out 0s;
+}
+
+.mode-button.active {
+  font-weight: bold;
+  box-shadow: none;
+  outline: none;
+  background-color: #F8D210;
+  color: whitesmoke;
+}
+
+.main-button {
+  cursor: pointer;
+  box-shadow: rgb(106, 176, 189) 0px 6px 0px;
+  font-size: 20px;
+  height: 55px;
+  text-transform: uppercase;
+  color:  #4CD7D0;
+  font-weight: bold;
+  width: 200px;
+  background-color: whitesmoke;
+  border-width: initial;
+  border-style: none;
+  margin: 20px 0px 0px;
+  padding: 0px 12px;
+  border-radius: 6px;
+  transition: color 0.5s ease-in-out 0s;
+}
+
+button:focus, button:active {
+  outline: none;
+}
+
+.main-button.active {
+  transform: translateY(6px);
+  box-shadow: none;
+  outline: none;
+  background-color:  #F8D210;
+  color: whitesmoke;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .clock {
+    font-size: 8rem;
+  }
+}
